@@ -13,7 +13,7 @@ def get_number_from_line(in_line):
     return first_digit * 10 + last_digit
 
 
-def get_number():
+def get_numbers():
     with open("data.txt") as f:
         for line in f:
             if not line:
@@ -22,5 +22,5 @@ def get_number():
 
 
 if __name__ == "__main__":
-    solution = sum(get_number())
+    solution = sum(get_numbers())
     print(solution)
