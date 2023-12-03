@@ -8,12 +8,11 @@ NUMBER_PATTERN = r"(?=([0-9]|one|two|three|four|five|six|seven|eight|nine))"
 
 def get_digits(in_str):
     matches = re.findall(NUMBER_PATTERN, in_str)
-    for m in matches:
-        yield ALL_DIGITS[m]
+    return [ALL_DIGITS[m] for m in matches]
 
 
 def get_number_from_line(in_line):
-    digits = list(get_digits(in_line))
+    digits = get_digits(in_line)
     first_digit = int(digits[0])
     last_digit = int(digits[-1])
     return first_digit * 10 + last_digit
