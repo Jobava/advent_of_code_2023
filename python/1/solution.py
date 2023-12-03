@@ -20,7 +20,6 @@ def get_number_from_line(in_line):
 
 
 def get_number():
-    lines_sum = 0
     with open("data.txt") as f:
         for line in f:
             if not line:
